@@ -31,6 +31,15 @@ Route::get('/inscription', function (){
 });
 
 Route::post('/inscription', function() {
+    request () ->validate([ /** Vérification des champs, l'utilisateur devra joindre des informations correcte pour poursuivre son inscription */
+        'email' => ['required', 'email'],
+        'password' => ['required', 'confirmed', 'min:8'],
+        'password_confirmation' => ['required'],
+    ], [
+        'password.min' => 'Pour des raisons de sécurité; votre mot de passe doit faire :min caractères.'
+    ]);
+
+
     $utilisateur = new App\Utilisateur;
     $utilisateur->nom = request('nom');
     $utilisateur->prenom = request('prenom');
@@ -38,6 +47,18 @@ Route::post('/inscription', function() {
     $utilisateur->adresse = request('adresse');
     $utilisateur->email = request('email');
 
-    return 'Bonjour Monsieur '. request('email');
+    return 'Bonjour Monsieur '. request('nom') . request ('prenom');
     return 'Formulaire bien';
+});
+
+Route::get('/utilisateurs', function () {
+    $utilisateurs = App\Utilisateur::all(); /** Récupérer toutes les données d'une table */
+
+    return view('utilisateurs', [
+        'utilisateurs' => $utilisateurs,
+    ]);
+});
+
+Route::get('/connexion', function() {
+    return view('connexion');
 });
