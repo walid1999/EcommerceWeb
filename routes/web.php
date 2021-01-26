@@ -34,9 +34,9 @@ Route::post('/inscription', function() {
     $utilisateur = new App\Utilisateur;
     $utilisateur->nom = request('nom');
     $utilisateur->prenom = request('prenom');
-    $utilisateur->mot_de_passe = bcrypot(request('password'));
+    $utilisateur->password = bcrypt(request('password'));
     $utilisateur->adresse = request('adresse');
-    $utilisateur->email = request('email')
+    $utilisateur->email = request('email');
 
     return 'Bonjour Monsieur '. request('email');
     return 'Formulaire bien';

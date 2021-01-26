@@ -20,6 +20,7 @@ class CreateUtilisateursTable extends Migration
             $table->string('prenom');
             $table->string('password');
             $table->string('adresse');
+            $table->string('age');
 
             
             $table->timestamps();
