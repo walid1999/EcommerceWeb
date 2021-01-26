@@ -36,7 +36,7 @@ Route::post('/inscription', function() {
     $utilisateur->prenom = request('prenom');
     $utilisateur->mot_de_passe = bcrypot(request('password'));
     $utilisateur->adresse = request('adresse');
-    $utilisateur->email = request('email')
+    $utilisateur->email = request('email');
 
     return 'Bonjour Monsieur '. request('email');
     return 'Formulaire bien';
