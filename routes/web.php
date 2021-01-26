@@ -24,3 +24,16 @@ Route::get('/home', function (){
 Route::get('/base', function (){
     return view('base');
 });
+
+
+Route::get('/inscription', function (){
+    return view('inscription');
+});
+
+Route::post('/inscription', function() {
+    $utilisateur = new App\Utilisateur;
+    $utilisateur->nom = request('nom');
+
+    return 'Bonjour Monsieur '. request('email');
+    return 'Formulaire bien';
+});
