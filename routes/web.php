@@ -47,7 +47,7 @@ Route::post('/inscription', function() {
     $utilisateur->adresse = request('adresse');
     $utilisateur->email = request('email');
 
-        $utilisateur->save();
+    $utilisateur->save();
 
     return 'Bonjour Monsieur '. request('nom') . request ('prenom');
     return 'Formulaire bien';
@@ -61,6 +61,5 @@ Route::get('/utilisateurs', function () {
     ]);
 });
 
-Route::get('/connexion', function() {
-    return view('connexion');
-});
+Route::get('/connexion', 'ConnexionController@formulaire');
+Route::post('/connexion', 'ConnexionController@traitement');

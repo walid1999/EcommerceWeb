@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form action="/inscription" method="post">
+    <form action="/connexion" method="post">
         {{ csrf_field() }}
 
         <p><input type="email" name="email" placeholder="Email" value="{{ old('email') }}"></p>
