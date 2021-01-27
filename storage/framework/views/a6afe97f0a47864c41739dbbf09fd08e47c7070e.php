@@ -8,6 +8,7 @@
             </div> 
         </div>
     </div>
+
     <div class="container marketing">
     <form action="/inscription" method="post">
         <?php echo e(csrf_field()); ?>
@@ -27,7 +28,7 @@
             <p><?php echo e($errors->first('email')); ?></p>
         <?php endif; ?>
 
-        <p><input type="password" name="password" placeholder="Mot de passe"></p> /** Un message d'erreur apparait dès que l'utilisateur ne respecte pas les conditions d'inscription */
+        <p><input type="password" name="password" placeholder="Mot de passe"></p> 
         <?php if($errors->has('password')): ?>
             <p><?php echo e($errors->first('password')); ?></p>
         <?php endif; ?>
