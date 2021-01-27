@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers ;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,8 @@ Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement')
 Route::get ('/mon-compte', 'App\Http\Controllers\CompteController@accueil');
 
 Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion');
+
+
+Route::get('/articles', 'App\Http\Controllers\ProductController@articles')->name('articles');
+Route::get('/home', 'App\Http\Controllers\ProductController@homearticles')->name('home');
+Route::get('/articles/{id_article}', 'App\Http\Controllers\ProductController@voirArticle')->name('article');

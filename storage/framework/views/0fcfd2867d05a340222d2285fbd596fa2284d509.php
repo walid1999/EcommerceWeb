@@ -14,8 +14,8 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="home">Accueil</a></li>
-                <li><a href="articles">Articles</a></li>
+                <li><a href="<?php echo e(route('home')); ?>">Accueil</a></li>
+                <li><a href="<?php echo e(route('articles')); ?>">Articles</a></li>
 				<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -39,5 +39,13 @@
         </div><!-- /.navbar -->
 
       </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-<?php /**PATH C:\Users\Walid\Documents\GitHub\EcommerceWeb\resources\views/header.blade.php ENDPATH**/ ?>
+	</div><!-- /.navbar-wrapper -->
+	
+	<div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="contain">
+            </div> 
+        </div>
+    </div>
+
+    <div class="container marketing"><?php /**PATH C:\Users\Walid\Documents\GitHub\EcommerceWeb\resources\views/header.blade.php ENDPATH**/ ?>
