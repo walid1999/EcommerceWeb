@@ -19,4 +19,10 @@ class Utilisateur extends Model implements Authenticatable
         return $this->password;
     }
 
+    public function getRememberTokenName()
+    
+    {
+        return '';
+    }
+
 }
