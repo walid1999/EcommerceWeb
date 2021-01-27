@@ -35,3 +35,13 @@ Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion');
 Route::get('/articles', 'App\Http\Controllers\ProductController@articles')->name('articles');
 
 Route::get('/articles/{id_article}', 'App\Http\Controllers\ProductController@voirArticle')->name('article');
+<<<<<<< Updated upstream
+=======
+
+Route::get('/{email}', 'App\Http\Controllers\UtilisateursController@voir');
+
+
+/*panier */
+
+Route::post('panier/ajouter', 'App\Http\Controllers\CartController@store')->name('panier');
+>>>>>>> Stashed changes
