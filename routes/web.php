@@ -47,6 +47,8 @@ Route::post('/inscription', function() {
     $utilisateur->adresse = request('adresse');
     $utilisateur->email = request('email');
 
+        $utilisateur->save();
+
     return 'Bonjour Monsieur '. request('nom') . request ('prenom');
     return 'Formulaire bien';
 });

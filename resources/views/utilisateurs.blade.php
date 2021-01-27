@@ -5,7 +5,7 @@
     <ul>
 
         @foreach($utilisateurs as $utilisateur)
-            <li> {{ $utilisateur->email }}</li> /** Liste de tous les utilisateurs qui se sont connectés */
+            <li> {{ $utilisateur->email }}</li>
         @endforeach
 
     </ul>

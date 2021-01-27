@@ -8,7 +8,7 @@
             </div> 
         </div>
     </div>
-    
+
     <div class="container marketing">
     <form action="/inscription" method="post">
         {{ csrf_field() }}
