@@ -14,25 +14,10 @@ use App\Http\Controllers ;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function (){
-    return view('home');
-});
+Route::get('/home', 'App\Http\Controllers\ProductController@homearticles')->name('home');
 
 Route::get('/base', function (){
     return view('base');
-});
-
-
-Route::get('/inscription', function (){
-    return view('inscription');
-});
-
-Route::get('/articles', function (){
-    return view('articles');
 });
 
 Route::post('/inscription', function() {
@@ -54,26 +39,21 @@ Route::post('/inscription', function() {
 
     $utilisateur->save();
 
-    return 'Bonjour Monsieur '. request('nom') . request ('prenom');
+    return 'Bonjour'. request('nom') . request ('prenom');
     return 'Formulaire bien';
-});
-
-Route::get('/utilisateurs', function () {
-    $utilisateurs = App\Utilisateur::all(); /** Récupérer toutes les données d'une table */
-
-    return view('utilisateurs', [
-        'utilisateurs' => $utilisateurs,
-    ]);
 });
 
 Route::get('/connexion', 'App\Http\Controllers\ConnexionController@formulaire');
 Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement');
 
+Route::get('/utilisateurs', 'App\Http\Controllers\UtilisateursController@liste');
+
 Route::get ('/mon-compte', 'App\Http\Controllers\CompteController@accueil');
 
 Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion');
 
-
 Route::get('/articles', 'App\Http\Controllers\ProductController@articles')->name('articles');
-Route::get('/home', 'App\Http\Controllers\ProductController@homearticles')->name('home');
+
 Route::get('/articles/{id_article}', 'App\Http\Controllers\ProductController@voirArticle')->name('article');
+
+Route::get('/{email}', 'App\Http\Controllers\UtilisateursController@voir');
