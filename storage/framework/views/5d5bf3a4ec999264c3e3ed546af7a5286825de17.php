@@ -1,8 +1,11 @@
 
 
 <?php $__env->startSection('content'); ?>
-    <div class="section">
-        <h1 class="title is-1"><?php echo e($utilisateur->email); ?></h1>
-    </div>
+    <h1>Utilisateurs</h1>
+    <ul>
+        <?php $__currentLoopData = $utilisateurs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $utilisateur): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <li> <?php echo e($utilisateur->email); ?></li>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Elodie Turam\Documents\GitHub\EcommerceWeb\resources\views/utilisateur.blade.php ENDPATH**/ ?>

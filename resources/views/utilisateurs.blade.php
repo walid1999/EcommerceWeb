@@ -4,7 +4,7 @@
     <h1>Utilisateurs</h1>
     <ul>
         @foreach($utilisateurs as $utilisateur)
-            <li> {{ $utilisateur->email }}</li>
+        <li> {{ $utilisateur->email }}</li>
         @endforeach
     </ul>
 @endsection
