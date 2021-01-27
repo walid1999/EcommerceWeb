@@ -63,3 +63,5 @@ Route::get('/utilisateurs', function () {
 
 Route::get('/connexion', 'App\Http\Controllers\ConnexionController@formulaire');
 Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement');
+
+Route::get ('/mon-compte', 'App\Http\Controllers\CompteController@accueil');

@@ -22,11 +22,6 @@
             <p>{{ $errors->first('password') }}</p>
         @endif
 
-        <p><input type="password" name="password_confirmation" placeholder="Mot de passe (confirmation)"></p>
-        @if ($errors->has('password_confirmation'))
-            <p>{{ $errors->first('password_confirmation') }}</p>
-        @endif
-
         <p><input type="submit" value="Se connecter"></p>
 
     </form>

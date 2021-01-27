@@ -13,13 +13,22 @@ class ConnexionController extends Controller
 
     public function traitement()
     {
-    request()->validate([
-        'email' => ['required', 'email'],
-        'password' => ['required'],
-    ]);
+        request()->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
 
-    // À faire : vérification que l'email et le mot de passe sont corrects.
+        $resultat = auth()->attempt([
+            'email' => request('email'),
+            'password' => request('password'),
+        ]);
 
-    return 'Traitement formulaire connexion';
+        if ($resultat) {
+            return redirect('/mon-compte');
+        }
+
+        return back()->withInput()->withErrors([
+            'email' => 'Vos identifiants sont incorrects.',
+        ]);
     }
 }
