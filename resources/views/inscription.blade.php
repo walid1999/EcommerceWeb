@@ -19,7 +19,7 @@
             <p>{{ $errors->first('email') }}</p>
         @endif
 
-        <p><input type="password" name="password" placeholder="Mot de passe"></p> /** Un message d'erreur apparait dès que l'utilisateur ne respecte pas les conditions d'inscription */
+        <p><input type="password" name="password" placeholder="Mot de passe"></p>
         @if ($errors->has('password'))
             <p>{{ $errors->first('password') }}</p>
         @endif
