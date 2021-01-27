@@ -61,5 +61,5 @@ Route::get('/utilisateurs', function () {
     ]);
 });
 
-Route::get('/connexion', 'ConnexionController@formulaire');
-Route::post('/connexion', 'ConnexionController@traitement');
+Route::get('/connexion', 'App\Http\Controllers\ConnexionController@formulaire');
+Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement');

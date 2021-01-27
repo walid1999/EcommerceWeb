@@ -2,6 +2,13 @@
 
 @section('content')
 
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="contain">
+            </div> 
+        </div>
+    </div>
+    <div class="container marketing">
     <form action="/connexion" method="post">
         {{ csrf_field() }}
 

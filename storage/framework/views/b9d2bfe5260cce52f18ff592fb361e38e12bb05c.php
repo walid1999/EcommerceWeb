@@ -2,7 +2,14 @@
 
 <?php $__env->startSection('content'); ?>
 
-    <form action="/inscription" method="post">
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="contain">
+            </div> 
+        </div>
+    </div>
+    <div class="container marketing">
+    <form action="/connexion" method="post">
         <?php echo e(csrf_field()); ?>
 
 
