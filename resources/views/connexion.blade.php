@@ -8,7 +8,9 @@
             </div> 
         </div>
     </div>
+    
     <div class="container marketing">
+
     <form action="/connexion" method="post">
         {{ csrf_field() }}
 

@@ -30,6 +30,10 @@ Route::get('/inscription', function (){
     return view('inscription');
 });
 
+Route::get('/articles', function (){
+    return view('articles');
+});
+
 Route::post('/inscription', function() {
     request () ->validate([ /** Vérification des champs, l'utilisateur devra joindre des informations correcte pour poursuivre son inscription */
         'email' => ['required', 'email'],
