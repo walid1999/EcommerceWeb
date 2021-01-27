@@ -2,6 +2,14 @@
 
 @section('content')
 
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="contain">
+            </div> 
+        </div>
+    </div>
+    
+    <div class="container marketing">
     <form action="/inscription" method="post">
         {{ csrf_field() }}
 
@@ -19,7 +27,7 @@
             <p>{{ $errors->first('email') }}</p>
         @endif
 
-        <p><input type="password" name="password" placeholder="Mot de passe"></p> /** Un message d'erreur apparait dès que l'utilisateur ne respecte pas les conditions d'inscription */
+        <p><input type="password" name="password" placeholder="Mot de passe"></p> 
         @if ($errors->has('password'))
             <p>{{ $errors->first('password') }}</p>
         @endif
