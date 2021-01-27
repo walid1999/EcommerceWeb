@@ -52,7 +52,9 @@
 		margin-top: 10px;
 	  }
   
-  
+	  .bouton{
+		  display: inline-block;
+	  }
   
 	  /* CUSTOMIZE THE CAROUSEL
 	  -------------------------------------------------- */
