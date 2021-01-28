@@ -75,7 +75,7 @@
 <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="../assets/img/wakerz.png" alt="">
+          <img src="https://cdn.discordapp.com/attachments/642081853284548629/804455424114819091/kristian-llana-hw-01-bar-final-3.png" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -85,7 +85,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/img/examples/slide-02.jpg" alt="">
+          <img src="https://cdnb.artstation.com/p/assets/images/images/013/606/913/4k/dennis-chan-spiderman-cover.jpg?1540381067" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/img/examples/slide-03.jpg" alt="">
+          <img src="https://cdna.artstation.com/p/assets/images/images/021/300/484/4k/sixmorevodka-studio-yasuo.jpg?1571152963" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
