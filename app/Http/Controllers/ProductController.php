@@ -8,7 +8,7 @@ use App\Product;
 class ProductController extends Controller
 {
     public function articles(){
-        $products = Product::inRandomOrder()->take(6)->get();
+        $products = Product::inRandomOrder()->take(10)->get();
        
         return view('articles')->with('products', $products);
        
