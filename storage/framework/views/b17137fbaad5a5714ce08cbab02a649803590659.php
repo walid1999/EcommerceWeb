@@ -6,14 +6,13 @@
 
       <div class="featurette">
         <img style="height: 380px; " class="featurette-image pull-right" src="<?php echo e($product->image); ?>">
-        <h2 class="featurette-heading"><?php echo e($product->titre); ?></h2>
-        <h2><?php echo e($product->prix); ?> € </h2>
+        <h2 class="featurette-heading"><?php echo e($product->title); ?></h2>
+        <h2><?php echo e($product->price); ?> € </h2>
         <p style="overflow-wrap: break-word; " class="lead"><?php echo e($product->description); ?></p>
          <form action="<?php echo e(route('store')); ?>" method="POST">
-           <?php echo csrf_field(); ?>
-           <input type="hidden" name="id_article" value="<?php echo e($product->id_article); ?>">
-           <input type="hidden" name="titre" value="<?php echo e($product->titre); ?>">
-           <input type="hidden" name="prix" value="<?php echo e($product->prix); ?>">
+            <?php echo csrf_field(); ?>
+           <input type="hidden" name="product_id" value="<?php echo e($product->id); ?>">
+          
         
            <button type="submit" class="btn btn-dark">Ajouter au panier</button>   
         </form>

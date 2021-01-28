@@ -3,24 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Product;
 
 class ProductController extends Controller
 {
     public function articles(){
-        $products = Product::inRandomOrder()->take(4)->get();
+        $products = Product::inRandomOrder()->take(6)->get();
        
         return view('articles')->with('products', $products);
        
     }
 
     public function homearticles(){
-        $products = Product::inRandomOrder()->take(4)->get();
+        $products = Product::inRandomOrder()->take(3)->get();
         return view('home')->with('products', $products);
     }
 
-    public function voirArticle($id_article){
-        $product = Product::where('id_article', $id_article)->first();
+    public function voirArticle($id){
+        $product = Product::where('id', $id)->first();
 
         return view('article')->with('product', $product);
     }
