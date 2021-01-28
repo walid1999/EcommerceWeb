@@ -10,19 +10,32 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Touti Louni</a>
+            <a class="brand" href="#">W/E</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li><a href="<?php echo e(route('home')); ?>">Accueil</a></li>
                 <li><a href="<?php echo e(route('articles')); ?>">Articles</a></li>
-				<li class="dropdown">
+
+                <?php if(auth()->check()): ?>
+
+                    <li class="dropdown">
+                  <a href="<?php echo e(route('mon-compte')); ?>" class="dropdown-toggle" data-toggle="dropdown"> Mon compte <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="<?php echo e(route('deconnexion')); ?>">Se deconnecter</a></li>
+                   
+                    </li>
+                <?php else: ?>
+
+				          <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="inscription">S'incrire</a></li>
-                    <li><a href="connexion">Se connecter</a></li>
+                    <li><a href="<?php echo e(route('inscription')); ?>">S'incrire</a></li>
+                    <li><a href="<?php echo e(route('connexion')); ?>">Se connecter</a></li>
+                    </li>
+                <?php endif; ?>
 				  </ul>
-				<li><a href="panier">Mon panier</a></li>
+				<li><a href="">Mon panier <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
                 <li><a href="sav">Service Client</a></li>
 				<li><a href="about">A propos</a></li>
 				
@@ -32,7 +45,7 @@
                   
                
                   
-                </li>
+                
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->

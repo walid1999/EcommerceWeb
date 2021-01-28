@@ -41,12 +41,25 @@
               <ul class="nav">
                 <li><a href="home">Accueil</a></li>
                 <li><a href="articles">Articles</a></li>
-				        <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
+				        <?php if(auth()->check()): ?>
+
+                    <li class="dropdown">
+                  <a href="<?php echo e(route('mon-compte')); ?>" class="dropdown-toggle" data-toggle="dropdown"> Espace Client <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="inscription">S'incrire</a></li>
-                    <li><a href="connexion">Se connecter</a></li>
-				          </ul>
+                    <li><a href="<?php echo e(route('mon-compte')); ?>">Mon profil</a></li>
+                    <li><a href="<?php echo e(route('deconnexion')); ?>">Se deconnecter</a></li>
+                   
+                    </li>
+                <?php else: ?>
+
+				          <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="<?php echo e(route('inscription')); ?>">S'incrire</a></li>
+                    <li><a href="<?php echo e(route('connexion')); ?>">Se connecter</a></li>
+                    </li>
+                <?php endif; ?>
+                  </ul>
 				        <li><a href="panier">Mon panier</a></li>
                 <li><a href="sav">Service Client</a></li>
 				        <li><a href="about">A propos</a></li>				                 
