@@ -27,6 +27,8 @@
 
     <body>
     @include('header')
+
+    @include('flash::message')
     
     @if(session('success'))
       <div class="alert alert-success">

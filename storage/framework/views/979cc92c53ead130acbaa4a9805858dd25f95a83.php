@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-<<div class="col-md-12">
+<div class="col-md-12">
     <h1>Mon panier</h1>
 </div>
 <?php if(Cart::count() > 0): ?>
@@ -64,6 +64,7 @@
             
 <?php else: ?>
     <div class="col-md-12">
+        <br/>
         <p>Votre panier est vide.</p>
     </div>
 <?php endif; ?>

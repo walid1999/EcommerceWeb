@@ -8,7 +8,6 @@
 
         <p>Vous êtes bien connecté.</p>
 
-        <a href="/deconnexion" class="button">Déconnexion</a>
     </div>
     <div><li></li></div>
     <div>
