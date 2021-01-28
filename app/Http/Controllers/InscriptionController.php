@@ -19,14 +19,20 @@ class InscriptionController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required', 'confirmed', 'min:8'],
             'password_confirmation' => ['required'],
+            'nom' => ['required'],
+            'prenom' => ['required'],
+            'adresse' => ['required']
         ]);
 
-        $utilisateur = App\Utilisateur::create([
+        $utilisateur = Utilisateur::create([
             'email' => request('email'),
             'password' => bcrypt(request('password')),
+            'nom' => request('nom'),
+            'prenom' => request('prenom'),
+            'adresse' => request('adresse')
         ]);
 
-        return 'Bonjour'. request('nom') . request ('prenom');
-        return 'Formulaire bien';
+        flash('Vous etes bien inscris')->success();
+        return redirect('/mon-compte');
     }
 }
