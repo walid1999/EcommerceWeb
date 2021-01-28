@@ -13,6 +13,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/45109b19e5.js" crossorigin="anonymous"></script>
     
 
 

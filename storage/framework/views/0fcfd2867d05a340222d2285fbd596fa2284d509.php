@@ -35,9 +35,9 @@
                     </li>
                 <?php endif; ?>
 				  </ul>
-				<li><a href="<?php echo e(route('monpanier')); ?>">Mon panier <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
+				
                 <li><a href="sav">Service Client</a></li>
-				<li><a href="about">A propos</a></li>
+				
 				
                 <!-- Read about Bootstrap dropdowns at https://getbootstrap.com/2.3.2/javascript.html#dropdowns -->
                 
@@ -45,8 +45,13 @@
                   
                
                   
-                
+                <li><a href="about">A propos</a></li>
               </ul>
+              <ul class="nav pull-right">      
+        <li class="pull-right"><a href="<?php echo e(route('monpanier')); ?>">
+						<i class="fas fa-shopping-basket"></i>
+        <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
+        </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
