@@ -11,6 +11,9 @@
   <link href="../assets/css/bootstrap.css" rel="stylesheet">
   <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/45109b19e5.js" crossorigin="anonymous"></script>
 
 
   <!-- Fav and touch icons -->
@@ -39,14 +42,14 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="home">Accueil</a></li>
-                <li><a href="articles">Articles</a></li>
-				        <?php if(auth()->check()): ?>
+                <li><a href="<?php echo e(route('home')); ?>">Accueil</a></li>
+                <li><a href="<?php echo e(route('articles')); ?>">Articles</a></li>
+
+                <?php if(auth()->check()): ?>
 
                     <li class="dropdown">
-                  <a href="<?php echo e(route('mon-compte')); ?>" class="dropdown-toggle" data-toggle="dropdown"> Espace Client <b class="caret"></b></a>
+                  <a href="<?php echo e(route('mon-compte')); ?>" class="dropdown-toggle" data-toggle="dropdown"> Mon compte <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="<?php echo e(route('mon-compte')); ?>">Mon profil</a></li>
                     <li><a href="<?php echo e(route('deconnexion')); ?>">Se deconnecter</a></li>
                    
                     </li>
@@ -59,12 +62,24 @@
                     <li><a href="<?php echo e(route('connexion')); ?>">Se connecter</a></li>
                     </li>
                 <?php endif; ?>
-                  </ul>
-                  <li><a href="<?php echo e(route('monpanier')); ?>">Mon panier <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
+				  </ul>
+				
                 <li><a href="sav">Service Client</a></li>
-				        <li><a href="about">A propos</a></li>				                 
-                </li>
+				
+				
+                <!-- Read about Bootstrap dropdowns at https://getbootstrap.com/2.3.2/javascript.html#dropdowns -->
+                
+                    
+                  
+               
+                  
+                <li><a href="about">A propos</a></li>
               </ul>
+              <ul class="nav pull-right">      
+        <li class="pull-right"><a href="<?php echo e(route('monpanier')); ?>">
+						<i class="fas fa-shopping-basket"></i>
+        <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
+        </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
