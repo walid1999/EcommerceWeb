@@ -34,14 +34,18 @@ Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion')-
 
 Route::get('/articles', 'App\Http\Controllers\ProductController@articles')->name('articles');
 
-Route::get('/articles/{id_article}', 'App\Http\Controllers\ProductController@voirArticle')->name('article');
+Route::get('/articles/{id}', 'App\Http\Controllers\ProductController@voirArticle')->name('article');
 
-Route::get('/{email}', 'App\Http\Controllers\UtilisateursController@voir');
 
 
 /*panier */
+Route::get('/panier', 'App\Http\Controllers\CartController@index')->name('monpanier');
+Route::post('panier/ajouter', 'App\Http\Controllers\CartController@store')->name('store');
+Route::delete('/panier/{rowId}', 'App\Http\Controllers\CartController@destroy')->name('cart.destroy');
 
-Route::post('ajouter', 'App\Http\Controllers\CartController@store')->name('store');
+Route::get('/videpanier', function () {
+    Cart::destroy();
+});
 
 
 
