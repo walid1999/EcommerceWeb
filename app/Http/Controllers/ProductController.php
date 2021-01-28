@@ -8,14 +8,14 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function articles(){
-        $products = Product::inRandomOrder()->take(2)->get();
+        $products = Product::inRandomOrder()->take(4)->get();
        
         return view('articles')->with('products', $products);
        
     }
 
     public function homearticles(){
-        $products = Product::inRandomOrder()->take(2)->get();
+        $products = Product::inRandomOrder()->take(4)->get();
         return view('home')->with('products', $products);
     }
 
