@@ -38,7 +38,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Touti Louni</a>
+            <a class="brand" href="#">W/E</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
@@ -93,9 +93,8 @@
           <img src="https://cdn.discordapp.com/attachments/642081853284548629/804455424114819091/kristian-llana-hw-01-bar-final-3.png" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>Bienvenue !</h1>
+              <p class="lead">..</p>
             </div>
           </div>
         </div>
@@ -104,8 +103,8 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <p class="lead">..</p>
+              <a class="btn btn-large btn-primary" href="<?php echo e(route('articles')); ?>">Un grand nombre d'articles</a>
             </div>
           </div>
         </div>
@@ -113,9 +112,9 @@
           <img src="https://cdna.artstation.com/p/assets/images/images/021/300/484/4k/sixmorevodka-studio-yasuo.jpg?1571152963" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+              <h1>Top des jeux</h1>
+              <p class="lead">..</p>
+              <a class="btn btn-large btn-primary" href="<?php echo e(route('inscription')); ?>">Inscrivez-vous</a>
             </div>
           </div>
         </div>

@@ -2,11 +2,12 @@
 
 @section('content')
 
-  
-    <form action="/inscription" method="post">
+<div class="container">
+    <form class="form-signin" action="/inscription" method="post">
         {{ csrf_field() }}
 
-        
+        <h2 class="form-signin-heading">Inscription</h2>
+        <br/>
         <p><input type="text" name="nom" placeholder="Nom"></p>
 
         <p><input type="text" name="prenom" placeholder="Prénom"></p>
@@ -30,8 +31,8 @@
             <p>{{ $errors->first('password_confirmation') }}</p>
         @endif
 
-        <p><input type="submit" value="M'inscrire"></p>
+        <p><input class="btn btn-large btn-black " type="submit" value="M'inscrire"></p>
 
     </form>
-
+</div>
 @endsection

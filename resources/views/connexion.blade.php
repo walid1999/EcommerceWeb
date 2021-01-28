@@ -2,11 +2,14 @@
 
 @section('content')
 
-    
 
-    <form action="/connexion" method="post">
+
+<div class="container">
+
+    <form class="form-signin" action="/connexion" method="post">
         {{ csrf_field() }}
-
+        <h2 class="form-signin-heading">Connexion</h2>
+        <br/>
         <p><input type="email" name="email" placeholder="Email" value="{{ old('email') }}"></p>
         @if ($errors->has('email'))
             <p>{{ $errors->first('email') }}</p>
@@ -17,8 +20,10 @@
             <p>{{ $errors->first('password') }}</p>
         @endif
 
-        <p><input type="submit" value="Se connecter"></p>
+        <p><input class="btn btn-large btn-black " type="submit" value="Se connecter"></p>
 
     </form>
+
+    </div>
 
 @endsection
