@@ -24,11 +24,11 @@ class ConnexionController extends Controller
         ]);
 
         if ($resultat) {
+            flash('Vous etes bien connecté')->success();
             return redirect('/mon-compte');
+        }else{
+            flash('Mauvais identifiant!')->error();
+            return back();
         }
-
-        return back()->withInput()->withErrors([
-            'email' => 'Vos identifiants sont incorrects.',
-        ]);
     }
 }

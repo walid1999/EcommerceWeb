@@ -20,17 +20,17 @@ Route::get('/base', function (){
     return view('base');
 });
 
-Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
+Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire')->name('inscription');
 Route::post('/inscription', 'App\Http\Controllers\InscriptionController@traitement');
 
 Route::get('/connexion', 'App\Http\Controllers\ConnexionController@formulaire');
-Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement');
+Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement')->name('connexion');
 
 Route::get('/utilisateurs', 'App\Http\Controllers\UtilisateursController@liste');
 
-Route::get ('/mon-compte', 'App\Http\Controllers\CompteController@accueil');
+Route::get ('/mon-compte', 'App\Http\Controllers\CompteController@accueil')->name('mon-compte');
 
-Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion');
+Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion')->name('deconnexion');
 
 Route::get('/articles', 'App\Http\Controllers\ProductController@articles')->name('articles');
 
@@ -41,4 +41,7 @@ Route::get('/{email}', 'App\Http\Controllers\UtilisateursController@voir');
 
 /*panier */
 
-Route::post('panier/ajouter', 'App\Http\Controllers\CartController@store')->name('panier');
+Route::post('ajouter', 'App\Http\Controllers\CartController@store')->name('store');
+
+
+

@@ -16,13 +16,26 @@
               <ul class="nav">
                 <li><a href="{{ route('home') }}">Accueil</a></li>
                 <li><a href="{{ route('articles') }}">Articles</a></li>
-				<li class="dropdown">
+
+                @if(auth()->check())
+
+                    <li class="dropdown">
+                  <a href="{{ route('mon-compte') }}" class="dropdown-toggle" data-toggle="dropdown"> Mon compte <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ route('deconnexion') }}">Se deconnecter</a></li>
+                   
+                    </li>
+                @else
+
+				          <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="inscription">S'incrire</a></li>
-                    <li><a href="connexion">Se connecter</a></li>
+                    <li><a href="{{ route('inscription') }}">S'incrire</a></li>
+                    <li><a href="{{ route('connexion') }}">Se connecter</a></li>
+                    </li>
+                @endif
 				  </ul>
-				<li><a href="panier">Mon panier <span class="badge badge-pill badge-dark"> {{ Cart::count() }} </span></a></li>
+				<li><a href="">Mon panier <span class="badge badge-pill badge-dark"> {{ Cart::count() }} </span></a></li>
                 <li><a href="sav">Service Client</a></li>
 				<li><a href="about">A propos</a></li>
 				
@@ -32,7 +45,7 @@
                   
                
                   
-                </li>
+                
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
