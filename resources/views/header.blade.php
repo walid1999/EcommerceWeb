@@ -20,8 +20,11 @@
                 @if(auth()->check())
 
                     <li class="dropdown">
-                  <a href="{{ route('mon-compte') }}" class="dropdown-toggle" data-toggle="dropdown"> Mon compte <b class="caret"></b></a>
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">Espace client<b class="caret"></b></a>
                   <ul class="dropdown-menu">
+                    <li><a href="{{ route('mon-compte') }}">Mon compte</a></li>
+                   
+                    
                     <li><a href="{{ route('deconnexion') }}">Se deconnecter</a></li>
                    
                     </li>

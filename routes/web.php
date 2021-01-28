@@ -28,16 +28,18 @@ Route::post('/connexion', 'App\Http\Controllers\ConnexionController@traitement')
 
 Route::get('/utilisateurs', 'App\Http\Controllers\UtilisateursController@liste');
 
+/*Mon compte*/
 Route::get ('/mon-compte', 'App\Http\Controllers\CompteController@accueil')->name('mon-compte');
 
+/*deconnexion*/
 Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion')->name('deconnexion');
 
-Route::post('/modification-mot-de-passe', 'App\Http\Controllers\CompteController@modificationPseudo');
+/*modification compte*/
 Route::post('/modification-mot-de-passe', 'App\Http\Controllers\CompteController@modificationEmail');
 Route::post('/modification-mot-de-passe', 'App\Http\Controllers\CompteController@modificationMotDePasse');
 
+/*route article*/
 Route::get('/articles', 'App\Http\Controllers\ProductController@articles')->name('articles');
-
 Route::get('/articles/{id}', 'App\Http\Controllers\ProductController@voirArticle')->name('article');
 
 

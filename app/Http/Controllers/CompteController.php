@@ -26,17 +26,7 @@ class CompteController extends Controller
     return redirect('/connexion');
     }
 
-    public function modificationPseudo()
-    {
-        request()->validate([
-            'pseudo' => ['required'],
-        ]);
-        
-        auth()->user()->update([
-            'pseudo' => (request('pseudo')),
-        ]);
 
-    }
 
     public function modificationEmail()
     {
