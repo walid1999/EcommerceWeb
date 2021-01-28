@@ -104,7 +104,7 @@
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
               <p class="lead">..</p>
-              <a class="btn btn-large btn-primary" href="#">Un grand nombre d'articles</a>
+              <a class="btn btn-large btn-primary" href="{{ route('articles') }}">Un grand nombre d'articles</a>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@
             <div class="carousel-caption">
               <h1>Top des jeux</h1>
               <p class="lead">..</p>
-              <a class="btn btn-large btn-primary" href="#">Inscrivez-vous</a>
+              <a class="btn btn-large btn-primary" href="{{ route('inscription') }}">Inscrivez-vous</a>
             </div>
           </div>
         </div>

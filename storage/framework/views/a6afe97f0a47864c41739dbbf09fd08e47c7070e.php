@@ -2,12 +2,13 @@
 
 <?php $__env->startSection('content'); ?>
 
-  
-    <form action="/inscription" method="post">
+<div class="container">
+    <form class="form-signin" action="/inscription" method="post">
         <?php echo e(csrf_field()); ?>
 
 
-        
+        <h2 class="form-signin-heading">Inscription</h2>
+        <br/>
         <p><input type="text" name="nom" placeholder="Nom"></p>
 
         <p><input type="text" name="prenom" placeholder="Prénom"></p>
@@ -31,9 +32,9 @@
             <p><?php echo e($errors->first('password_confirmation')); ?></p>
         <?php endif; ?>
 
-        <p><input type="submit" value="M'inscrire"></p>
+        <p><input class="btn btn-large btn-black " type="submit" value="M'inscrire"></p>
 
     </form>
-
+</div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Walid\Documents\GitHub\EcommerceWeb\resources\views/inscription.blade.php ENDPATH**/ ?>

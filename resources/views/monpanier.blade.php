@@ -2,7 +2,7 @@
 
 @section('content')
 
-<<div class="col-md-12">
+<div class="col-md-12">
     <h1>Mon panier</h1>
 </div>
 @if (Cart::count() > 0)
@@ -64,6 +64,7 @@
             
 @else
     <div class="col-md-12">
+        <br/>
         <p>Votre panier est vide.</p>
     </div>
 @endif
