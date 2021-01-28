@@ -35,19 +35,32 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Touti Louni</a>
+            <a class="brand" href="#">W/E</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li><a href="home">Accueil</a></li>
                 <li><a href="articles">Articles</a></li>
-				        <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
+				        <?php if(auth()->check()): ?>
+
+                    <li class="dropdown">
+                  <a href="<?php echo e(route('mon-compte')); ?>" class="dropdown-toggle" data-toggle="dropdown"> Espace Client <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="inscription">S'incrire</a></li>
-                    <li><a href="connexion">Se connecter</a></li>
-				          </ul>
-				        <li><a href="panier">Mon panier</a></li>
+                    <li><a href="<?php echo e(route('mon-compte')); ?>">Mon profil</a></li>
+                    <li><a href="<?php echo e(route('deconnexion')); ?>">Se deconnecter</a></li>
+                   
+                    </li>
+                <?php else: ?>
+
+				          <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Espace client <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="<?php echo e(route('inscription')); ?>">S'incrire</a></li>
+                    <li><a href="<?php echo e(route('connexion')); ?>">Se connecter</a></li>
+                    </li>
+                <?php endif; ?>
+                  </ul>
+                  <li><a href="<?php echo e(route('monpanier')); ?>">Mon panier <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
                 <li><a href="sav">Service Client</a></li>
 				        <li><a href="about">A propos</a></li>				                 
                 </li>
@@ -62,32 +75,31 @@
 <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="../assets/img/wakerz.png" alt="">
+          <img src="https://cdn.discordapp.com/attachments/642081853284548629/804455424114819091/kristian-llana-hw-01-bar-final-3.png" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>Bienvenue !</h1>
+              <p class="lead">..</p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="../assets/img/examples/slide-02.jpg" alt="">
+          <img src="https://cdnb.artstation.com/p/assets/images/images/013/606/913/4k/dennis-chan-spiderman-cover.jpg?1540381067" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <p class="lead">..</p>
+              <a class="btn btn-large btn-primary" href="#">Un grand nombre d'articles</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="../assets/img/examples/slide-03.jpg" alt="">
+          <img src="https://cdna.artstation.com/p/assets/images/images/021/300/484/4k/sixmorevodka-studio-yasuo.jpg?1571152963" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+              <h1>Top des jeux</h1>
+              <p class="lead">..</p>
+              <a class="btn btn-large btn-primary" href="#">Inscrivez-vous</a>
             </div>
           </div>
         </div>
@@ -105,9 +117,9 @@
        <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
        <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140" src="<?php echo e($product->image); ?>">
-          <h2><?php echo e($product->titre); ?> </h2>
-          <h3> <?php echo e($product->prix); ?> € </h3>
-          <p><a class="btn" href="<?php echo e(route('article', $product->id_article)); ?>">Voir Produit </a></p>
+          <h2><?php echo e($product->title); ?> </h2>
+          <h3> <?php echo e($product->price); ?> € </h3>
+          <p><a class="btn" href="<?php echo e(route('article', $product->id)); ?>">Voir Produit </a></p>
         </div><!-- /.span4 -->
        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>   
 

@@ -12,6 +12,7 @@
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
 
 
@@ -26,7 +27,13 @@
     <body>
     <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     
-    
+    <?php if(session('success')): ?>
+      <div class="alert alert-success">
+          <?php echo e(session('success')); ?>
+
+      </div>
+    <?php endif; ?>
+
     <?php echo $__env->yieldContent('content'); ?>
 
     <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
