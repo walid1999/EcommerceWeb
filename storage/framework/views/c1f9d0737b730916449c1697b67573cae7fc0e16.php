@@ -35,7 +35,7 @@
                     </li>
                 <?php endif; ?>
 				  </ul>
-				<li><a href="">Mon panier <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
+				<li><a href="<?php echo e(route('monpanier')); ?>">Mon panier <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
                 <li><a href="sav">Service Client</a></li>
 				<li><a href="about">A propos</a></li>
 				
