@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Utilisateur;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\welcomeUser;
 
 class InscriptionController extends Controller
 {
@@ -32,7 +34,9 @@ class InscriptionController extends Controller
             'adresse' => request('adresse')
         ]);
 
-        flash('Vous etes bien inscris')->success();
-        return redirect('/mon-compte');
+        Mail::to($utilisateur)->send(new welcomeUser);
+
+        flash('Vous êtes bien inscrits')->success();
+        return redirect('/connexion');
     }
 }

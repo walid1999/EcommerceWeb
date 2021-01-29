@@ -105,9 +105,9 @@
           <img src="https://cdnb.artstation.com/p/assets/images/images/013/606/913/4k/dennis-chan-spiderman-cover.jpg?1540381067" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">..</p>
-              <a class="btn btn-large btn-primary" href="{{ route('articles') }}">Un grand nombre d'articles</a>
+              <h1>Un grand nombre d'articles</h1>
+              <p class="lead">Des stocks inépuisables grâce à notre équipe de choc.</p>
+              <a class="btn btn-large btn-primary" href="{{ route('articles') }}">Voir les articles</a>
             </div>
           </div>
         </div>
@@ -116,8 +116,8 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Top des jeux</h1>
-              <p class="lead">..</p>
-              <a class="btn btn-large btn-primary" href="{{ route('inscription') }}">Inscrivez-vous</a>
+              <p class="lead">Des prix incroyable, les meilleurs du marché. Rejoignez nous maintenant pour en profiter au plus vite.</p>
+              <a class="btn btn-large btn-primary" href="{{ route('inscription') }}">Rejoignez nous</a>
             </div>
           </div>
         </div>
