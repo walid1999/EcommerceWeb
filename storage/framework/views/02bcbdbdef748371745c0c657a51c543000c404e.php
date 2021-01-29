@@ -27,19 +27,19 @@
 <body>
 
 <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    
       <div class="container">
 
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+           
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
             <a class="brand" href="#">W/E</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li><a href="<?php echo e(route('home')); ?>">Accueil</a></li>
@@ -68,20 +68,22 @@
 	
                 
                 <li><a href="about">A propos</a></li>
-                <li>
+          
+                <li class="pull-right"><a href="<?php echo e(route('monpanier')); ?>">
+						      <i class="fas fa-shopping-basket"></i>
+                  <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a>
+                </li>
+              </ul>
+              <ul class="nav pull-right">  
+              <li>
                 <form action="<?php echo e(route('recherche')); ?>" style="display: flex; margin: 3px;";>
-                    <div class="form-group " style="margin-top: 10px; height: 20px;">
+                    <div class="form-group " style="margin-top: 7px; height: 20px;">
                       <input type="text" name="search" class="form-control" value="<?php echo e(request()->search ?? ''); ?>">
                     </div>
-                      <button style="margin-top: 10px; ;" type="submit" class="btn "><i class="fa fa-search" aria-hidden="true"></i></button>
+                      <button style="margin-top: 7px; ;" type="submit" class="btn "><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
-              </li>
-
-              </ul>
-              <ul class="nav pull-right">      
-        <li class="pull-right"><a href="<?php echo e(route('monpanier')); ?>">
-						<i class="fas fa-shopping-basket"></i>
-        <span class="badge badge-pill badge-dark"> <?php echo e(Cart::count()); ?> </span></a></li>
+              </li>         
+        
         </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
