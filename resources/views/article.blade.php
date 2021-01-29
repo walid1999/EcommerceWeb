@@ -17,4 +17,6 @@
            <button type="submit" class="btn btn-dark">Ajouter au panier</button>   
         </form>
 
+        
+
 @endsection

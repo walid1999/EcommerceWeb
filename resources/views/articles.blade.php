@@ -17,6 +17,9 @@
 
   
       </div><!-- /.row -->
-
+      <hr class="featurette-divider">
+      <div style="display: flex; justify-content: center;">
+      {{$products->links()}} 
+      </div> 
         
 @endsection

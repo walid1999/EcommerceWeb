@@ -17,7 +17,10 @@
 
   
       </div><!-- /.row -->
-
+      <hr class="featurette-divider">
+      <div style="display: flex; justify-content: center;">
+      <?php echo e($products->links()); ?> 
+      </div> 
         
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Walid\Documents\GitHub\EcommerceWeb\resources\views/articles.blade.php ENDPATH**/ ?>
