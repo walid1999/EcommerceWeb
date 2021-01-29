@@ -54,4 +54,7 @@ Route::get('/videpanier', function () {
 });
 
 
+Route::get('/recherche', 'App\Http\Controllers\ProductController@search')->name('recherche');
+
+
 

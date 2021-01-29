@@ -65,15 +65,18 @@
 				  </ul>
 				
                 <li><a href="sav">Service Client</a></li>
-				
-				
-                <!-- Read about Bootstrap dropdowns at https://getbootstrap.com/2.3.2/javascript.html#dropdowns -->
+	
                 
-                    
-                  
-               
-                  
                 <li><a href="about">A propos</a></li>
+                <li>
+                <form action="<?php echo e(route('recherche')); ?>" style="display: flex; margin: 3px;";>
+                    <div class="form-group " style="margin-top: 10px; height: 20px;">
+                      <input type="text" name="search" class="form-control" value="<?php echo e(request()->search ?? ''); ?>">
+                    </div>
+                      <button style="margin-top: 10px; ;" type="submit" class="btn "><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+              </li>
+
               </ul>
               <ul class="nav pull-right">      
         <li class="pull-right"><a href="<?php echo e(route('monpanier')); ?>">

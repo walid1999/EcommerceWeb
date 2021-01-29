@@ -17,6 +17,8 @@
            <button type="submit" class="btn btn-dark">Ajouter au panier</button>   
         </form>
 
+        
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Walid\Documents\GitHub\EcommerceWeb\resources\views/article.blade.php ENDPATH**/ ?>

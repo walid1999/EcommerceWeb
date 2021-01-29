@@ -25,4 +25,17 @@ class ProductController extends Controller
         return view('article')->with('product', $product);
     }
     
+
+    public function search()
+    {
+        request()->validate([
+            'search' => 'required|min:1'
+        ]);
+
+        $search = request()->input('search');
+
+        $products = Product::where('title', 'like', "%$search%")->Orderby('id')->paginate(10);
+
+        return view('recherche')->with('products', $products);
+    }
 }
